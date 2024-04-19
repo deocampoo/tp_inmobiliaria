@@ -1,0 +1,90 @@
+#header {
+    background-color: #7b847f;
+    padding: 20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    border-radius: 20PX;
+    display: flex;
+}
+#logo {
+    
+    border-radius: 20px;
+    width: 400px;
+    height: 100px;
+
+    
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 30px;
+    font-size: 20px;;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: 20px;
+    
+   
+}
+
+nav a:hover {
+    color: white;
+}
+
+#formularios {
+
+    margin-top: 50px;
+    font-size: 25px;
+    border-radius: 20px;
+    background-color:  #7b847f;
+    padding: 10px;
+    width: 900px;
+    height: 30px;
+    box-shadow: rgb(150,150,150) 5px 5px inset;
+    
+}
+
+#buscarPropiedad {
+    background-color: #90a4a1;
+    border-radius: 20px;
+    width: 110px;
+    font-size: 15px;
+    margin-top: 30px;
+
+    
+}
+#propiedades {
+    margin-top: 100px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+
+#belgrano {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+#belgrano img {
+    width: 250px;
+    height: 250px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+#precioBelgrano, #direccionBelgrano {
+    text-align: left;
+    margin-left :10px;
+}
+
+
+
+
+body {
+    background-color: #95c0c0
+    ;
+    
+}
