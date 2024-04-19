@@ -5,35 +5,41 @@
     margin-bottom: 20px;
     border-radius: 20PX;
     display: flex;
+
 }
 #logo {
     
     border-radius: 20px;
     width: 400px;
     height: 100px;
+    display: flex;
+    margin: 10px;
+    
+    
 
     
 }
 
 nav a {
+    display: inline-block;
     color: white;
     text-decoration: none;
-    margin: 30px;
+    margin: 40px;
     font-size: 20px;;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    text-align: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: 50px;
     
    
 }
 
 nav a:hover {
-    color: white;
+    color:  #66655e;
 }
 
 #formularios {
 
-    margin-top: 50px;
+    margin-top: 250px;
     font-size: 25px;
     border-radius: 20px;
     background-color:  #7b847f;
@@ -54,9 +60,10 @@ nav a:hover {
     
 }
 #propiedades {
-    margin-top: 100px;
+    margin-top: 200px;
     text-align: left;
     margin-left: 10px;
+    margin-bottom: 60px;
 }
 
 
@@ -68,14 +75,15 @@ nav a:hover {
 }
 
 
-#belgrano img {
+#belgrano img, #palermo img {
+    margin-bottom: 55px;
     width: 250px;
     height: 250px;
     margin: 5px;
     border-radius: 10px;
 }
 
-#precioBelgrano, #direccionBelgrano {
+#precioBelgrano, #direccionBelgrano, #precioPalermo, #direccionPalermo {
     text-align: left;
     margin-left :10px;
 }
