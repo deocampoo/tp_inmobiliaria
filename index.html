@@ -9,8 +9,8 @@
     
 </head>
 <body>
-        <header>
-        <div id = "header">
+        <header id = "header">
+        <div id = "navegacion">
             <img src = "Imagenes/Logo/Logo.png" id = "logo">
             <nav>
                 <a href = "#operaciones"><b>Operaciones</b></a>
@@ -19,15 +19,13 @@
                 <a href = "#contacto"><b>Contacto</b></a>
             </nav>
         </div>
-      
-
     </header>
     <center>
-        <h2><i>Encontrá tu espacio perfecto con nosotros</i></h2>
+        <h2 id = "eslogan"><i>Encontrá tu espacio perfecto con nosotros</i></h2>
     </center>
 <center>   
 
-    <section id="formularios">
+<section id="operaciones">
  <form>
         <select>
             <option>--Tipo de operación</option>
@@ -58,10 +56,10 @@
 </section>
 </center> 
 
-<section >
-
-        <h2 id = "propiedades">Nuestras propiedades destacadas</h2>
+<section id = "propiedades" >
+        <h2 id = "propiedadesDestacadas">Nuestras propiedades destacadas</h2>
         <h3 id = "precioBelgrano">Desde USD $186.468</h3>
+        <h3 id = "direccionBelgrano">Franklin D. Roosevelt 3141, Belgrano, Capital Federal </h3>
         <div id = "belgrano">
             <img src = "Imagenes/Belgrano/imagen1.jpg">
             <img src = "Imagenes/Belgrano/Imagen2.jpg">
@@ -69,9 +67,10 @@
             <img src = "Imagenes/Belgrano/Imagen4.jpg">
             <img src = "Imagenes/Belgrano/Imagen5.jpg">
         </div>
-       <h3 id = "direccionBelgrano">Franklin D. Roosevelt 3141, Belgrano, Capital Federal </h3>
+       <p id = "descripBelgrano">Se trata de un emprendimiento de superlujo compuesto por más de 349 departamentos en altura distribuida en dos sectores: Sky View y Palace, proyectadas por el prestigioso Estudio Aisenson. Todas las unidades cuentan con vistas panorámicas. Departamentos de 1, 2, 3, 4, 4 con Dependencia, y 5 Ambientes desde 45 m² a 275 m², que poseen la particularidad de unificarse. Cocheras y bauleras. El total construido será de una superficie de 45.000 m².</p>
        <hr>
        <h3 id = "precioPalermo">Venta USD $210.000</h3>
+       <h3 id = "direccionPalermo">Av. Cordoba 3700, Palermo, Capital Federal</h3>
        <div id ="palermo">
         <img src = "Imagenes/Palermo/1.jpg">
         <img src = "Imagenes/Palermo/2.jpg">
@@ -79,13 +78,44 @@
         <img src=  "Imagenes/Palermo/4.jpg">
         <img src = "Imagenes/Palermo/5.jpg">
        </div>
-       <h3 id = "direccionPalermo">Av. Cordoba 3700, Palermo, Capital Federal</h3>
+       <p id = "descripPalermo">Hermoso edificio en Av. Cordoba y Medrano, muy luminoso, amplio, se entrega equipado con cocina completa, aires split frio - calor en todos los ambientes, el edificio cuenta con gimasio, SUM y parrilla en el ultimo piso.</p>
+       <hr>
+       <h3 id = "direccionNuñez">Venta USD 195.000</h3>
+       <h3 id = "direccionNuñez">Correa al 2300, Núñez, Capital Federal</h3>
+       <div id = "nuñez">
+        <img src = "Imagenes/Nuñez/Imagen1.jpg">
+        <img src = "Imagenes/Nuñez/Imagen2.jpg">
+        <img src = "Imagenes/Nuñez/Imagen3.jpg">
+        <img src = "Imagenes/Nuñez/Imagen4.jpg">
+        <img src = "Imagenes/Nuñez/Imagen5.jpg"> 
+       </div>
+       <p id = "descripNuñez">Edificio de doble frente con unidades 1, 2 y 3 ambientes con amenities tales como SUM, parrillas, bike parking, pileta, solarium, duchas y mucho más. 
+    </p>
+    <hr>
+
+
         
 </section>
-<hr>
-<section id="contacto">
-    <div id="contacto">
 
+<section id = "comentarios">
+    <center>
+    <h3>Comentarios</h3>
+    <div>
+        <p>&quot;Compre un departamento en la zona de Nuñez este año. Gracias por la excelente atención&quot;</p>
+        <h4>Sofia, 2021</h4>
+        <hr>
+        <p>&quot;Me asesoraron muy seriamente. Compre un departamento de pozo y aclararon todas mis dudas desde un principio. Gracias&quot;</p>
+        <h4>Marcelo, 2023</h4>
+
+    </div>
+</center>
+
+
+</section>
+
+
+<section id="contacto">
+    <div id  = "mensaje">
     <h4>Para más información:</h4>
     <form align="left">
         <label>Nombre y Apellido</label>
@@ -94,38 +124,32 @@
         <input type="email"><br>
         <label>Teléfono</label>
         <input type="text"><br>
-        <label>Comentario</label>
-        <input type="text"  
-    </form>
-    <ul>
-    
+        <label>Mensaje</label>
+        <input type="text"> 
+    </form>    
     </div>
+    <button id ="enviarMensaje">Enviar</button>
+
 </section>
 
 
-<section id="footer">
-<footer>
-    <div class="footer">
+<footer id = "footer">
+    <div id="datosContacto">
         <h3>Contacto</h3>
         <p>Dirección: Honduras 714, CABA</p>
         <p>Teléfono: +54 11 6457-9122</p>
         <p>Correo electrónico: info@espacioyhogar.com</p>
         <p>Horario: Lunes a Viernes, 9am - 5pm</p>
-   
     <h3>Seguinos en Redes Sociales</h3>
     <ul>
-        <li><a href="https://facebook.com/inmobiliaria" target="_blank">Facebook</a></li>
-        <li><a href="https://twitter.com/inmobiliaria" target="_blank">Twitter</a></li>
+        <li id = "facebook"><img src = "Imagenes/Redes/Facebook.png"><a href="https://facebook.com/inmobiliaria" target="_blank">Facebook</a></li>
+        <li id = "twitter"><img src = "Imagenes/Redes/Twitter.png"><a href="https://twitter.com/inmobiliaria" target="_blank">Twitter</a></li>
     </ul>
 </div>
 <hr>
-
     <p>2024 ESPACIO Y HOGAR INMOBILIARIA | Todos los derechos reservados</p>
  
-
-
-</footer>  
-</section>  
+</footer>   
     
 </body>
 </html>

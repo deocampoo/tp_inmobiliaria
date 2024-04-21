@@ -1,4 +1,4 @@
-#header {
+ #navegacion {
     background-color: #7b847f;
     padding: 20px;
     margin-top: 0px;
@@ -7,30 +7,19 @@
     display: flex;
 
 }
-
-body {
-    font-family: Didot, "Didot LT STD";
-
-
-}
 #logo {
     
     border-radius: 20px;
     width: 400px;
     height: 100px;
     display: flex;
-    margin: 10px;
-    
-    
-
-    
+    margin: 10px;    
 }
-
 nav a {
     display: inline-block;
     color: white;
     text-decoration: none;
-    margin: 40px;
+    margin: 25px;
     font-size: 20px;;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -42,10 +31,13 @@ nav a {
 nav a:hover {
     color:  #66655e;
 }
-h1 {
-    margin-bottom: 5px;
+
+#eslogan {
+    margin: 30px;
+    
 }
-#formularios {
+
+#operaciones {
 
     margin-top: 40px;
     margin-bottom: 55px;
@@ -70,15 +62,16 @@ h1 {
 
     
 }
-#propiedades {
+#propiedadesDestacadas {
     margin-top: 100px;
     text-align: left;
     margin-left: 10px;
     margin-bottom: 60px;
+    text-decoration: underline;
 }
 
 
-#belgrano {
+#belgrano, #palermo, #nuñez {
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
@@ -86,7 +79,7 @@ h1 {
 }
 
 
-#belgrano img, #palermo img {
+#belgrano img, #palermo img, #nuñez img {
     margin-bottom: 55px;
     width: 250px;
     height: 250px;
@@ -94,31 +87,22 @@ h1 {
     border-radius: 10px;
 }
 
-#precioBelgrano, #direccionBelgrano, #precioPalermo, #direccionPalermo {
+#precioBelgrano, #direccionBelgrano, #precioPalermo, #direccionPalermo, #precioNuñez, #direccionNuñez, #descripBelgrano, #descripPalermo, #descripNuñez {
     text-align: left;
     margin-left :10px;
 }
 
-body {
-    background-color: #95c0c0;
-    color: #333333;
-    text-align: justify
-    font-weight: normal;
-    letter-spacing: 1px;
-    margin: 20px;
-    word-spacing: 2px;
-    line-height: 1.5;
-   
-   
+
+
+#comentarios{
+    background-color:  rgba(225, 228, 228, 0.8);    
+    border-radius: 10px;
+    margin: 60px;
+
 }
 
-hr{
-    border: none;
-    border-top: 1px solid #66655e;
-    margin: 20px 0;
-}
 
-#contacto{
+#contacto, #mensaje{
     background-color: rgba(144, 164, 161, 0.8);    
     padding: 5px;
     margin: 5px;
@@ -128,7 +112,22 @@ hr{
     font-size: 15px;
 }
 
-#footer{
+#enviarMensaje {
+    background-color: #90a4a1;
+    border-radius: 20px;
+    font-size: 15px;
+}
+
+
+#facebook, #twitter {
+    display: flex;
+    margin:7px;
+    width: 20px;
+    height: 20px;
+    
+}
+
+#footer, #datosContacto{
     background-color: rgba(225, 228, 228, 0.8);    
     padding: 5px;
     margin: 5px;
@@ -138,3 +137,22 @@ hr{
     font-size: 13px;
 }
 
+body {
+    background-color: #95c0c0;
+    color: #333333;
+    text-align: justify;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin: 20px;
+    word-spacing: 2px;
+    line-height: 1.5;
+    font-family: Didot, "Didot LT STD";
+   
+   
+}
+
+hr{
+    border: none;
+    border-top: 1px solid #66655e;
+    margin: 20px 0;
+}
