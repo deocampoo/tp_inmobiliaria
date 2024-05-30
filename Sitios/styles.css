@@ -1,0 +1,42 @@
+
+ /*pagina nunez venta*/
+
+.contenedorNunez{
+    background-color: antiquewhite;
+}
+.imagenNunez {
+    width: 100%; 
+    height: auto; 
+}
+
+.descripcionNunez {
+    font-size: 30px;
+}
+/*pagina belgrano alquiler*/
+
+.ContenedorBelgrano {
+    border: 2px solid black; 
+    display: flex;
+    width: 1000px;
+    height: 300px;
+}
+
+.ImagenBelgrano img {
+    width: 450px;
+    height: 300px;
+}
+
+.TextoBelgrano {
+    text-align: center;
+   
+
+    
+}
+
+.TextoBelgrano ul {
+    display: flex;
+}
+
+.TextoBelgrano li {
+    margin: 20px;
+}
