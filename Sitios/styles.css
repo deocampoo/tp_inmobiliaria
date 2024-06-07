@@ -1,6 +1,6 @@
 
- /*pagina nunez venta*/
-.TituloNunez p {
+
+.TituloNunez p, .TituloBelgrano p {
     font-size: 25px;
     margin-top: 30px;
     margin-bottom: 20px;
@@ -39,9 +39,6 @@
 .TextoNunez li, .TextoBelgrano li{
     display: flex ;
 }
-
-/*pagina belgrano alquiler*/
-
 
 
 body {
