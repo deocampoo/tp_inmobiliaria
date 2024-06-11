@@ -157,6 +157,11 @@ hr{
     margin: 20px 0;
 }
 
+.campo-enfocado {
+    border: 2px solid  #66655e;
+    outline: none; /* Para quitar el contorno predeterminado en algunos navegadores */
+}
+
 
 
 

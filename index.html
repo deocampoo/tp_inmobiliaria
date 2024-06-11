@@ -6,6 +6,86 @@
     content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href="estilos.css"> 
     <title>Espacio y Hogar Inmobiliaria</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // Carga de página suave
+            $('a[href^="#"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+                if( target.length ) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                }
+            });
+
+            // Validación de formulario
+            $('#formulario').submit(function(event) {
+                event.preventDefault();
+                var nombre = $('#nombre').val();
+                var email = $('#email').val();
+                var telefono = $('#telefono').val();
+                if(nombre && email && telefono) {
+                    alert("Su formulario ha sido enviado");
+                    this.reset();
+                } else {
+                    alert("Por favor complete todos los campos.");
+                }
+            });
+
+            // Validación de entrada numérica para el código postal
+            $('#codigoPostal').on('keypress', function(event) {
+                if(event.which < 48 || event.which > 57) {
+                    event.preventDefault();
+                }
+            });
+        });
+
+        $(document).ready(function(){
+            // Aplica el evento focus a los campos del formulario
+            $('#nombre, #email, #telefono').on('focus', function() {
+                // Agrega la clase 'campo-enfocado' al campo enfocado
+                $(this).addClass('campo-enfocado');
+            });
+
+            // Aplica el evento blur para eliminar la clase cuando el campo pierde el foco
+            $('#nombre, #email, #telefono').on('blur', function() {
+                // Elimina la clase 'campo-enfocado' cuando el campo pierde el foco
+                $(this).removeClass('campo-enfocado');
+            });
+        });
+
+         $(document).ready(function(){
+            // Animación para el eslogan al cargar la página
+            $('#eslogan').animate({
+                opacity: '1', // Hace que el eslogan sea visible
+                marginTop: '10px' // Mueve el eslogan hacia abajo
+            }, 1500); // Duración de la animación en milisegundos (en este caso, 1.5 segundos)
+        });
+        $(document).ready(function() {
+            // Función para animar las imágenes dentro del área de propiedades al cargar la página
+            $('#propiedades img').css('opacity', '0'); // Establece la opacidad inicial en 0 para todas las imágenes dentro del área de propiedades
+            $('#propiedades img').each(function(index) {
+                $(this).delay(2 * index).animate({
+                    opacity: '1', // Ajusta la opacidad al valor final deseado
+                    width: '+=10px', // Puedes ajustar otros estilos aquí si lo deseas
+                    height: '+=10px'
+                }, 1000); // Duración de la animación en milisegundos (en este caso, 1 segundo)
+                    });
+            });
+
+        $(document).ready(function() {
+        // Función para animar el logo al cargar la página
+            $('#logo').css('opacity', '0'); // Establece la opacidad inicial del logo en 0
+            $('#logo').animate({
+                opacity: '1', // Ajusta la opacidad al valor final deseado
+                width: '+=5px', // Puedes ajustar otros estilos aquí si lo deseas
+                height: '+=5px'
+        }, 1000); // Duración de la animación en milisegundos (en este caso, 1 segundo)
+        });
+        
+    </script>   
     
 </head>
 <body>
@@ -26,26 +106,26 @@
 <center>   
 
 <section id="operaciones">
- <form>
-        <select>
-            <option>--Tipo de operación</option>
-            <option>Venta</option>
-            <option>Alquiler</option>
+ <form id = "formBusqueda">
+        <select id = "tipoOperacion">
+            <option value ="">--Tipo de operación</option>
+            <option value = "venta">Venta</option>
+            <option value = "alquiler">Alquiler</option>
         </select>
-            <select>
-                <option>--Tipo de propiedad--</option>
-                <option>Departamento</option>
-                <option>Casa</option>
+            <select id = "tipoPropiedad">
+                <option value = "">--Tipo de propiedad--</option>
+                <option value = "departamento">Departamento</option>
+                <option value ="casa">Casa</option>
             </select>
-            <select>
-                <option>--Localidad--</option>
-                <option>Belgrano</option>
-                <option>Palermo</option>
-                <option>Núñez</option>
-                <option>Recoleta</option>
+            <select id = "localidad">
+                <option value = "">--Localidad--</option>
+                <option value = "belgrano">Belgrano</option>
+                <option value = "palermo">Palermo</option>
+                <option value = "nuñez">Núñez</option>
+                <option value = "Recoleta">Recoleta</option>
             </select>
         <label style="font-size: 18px;">Código postal:</label>
-        <input type="text">
+        <input type="text" id = "codigoPostal">
     </form>
     <button id = buscarPropiedad >Buscar</button>
 </section>
@@ -112,18 +192,18 @@
 <section id="contacto">
     <div id  = "mensaje">
     <h4>Para más información:</h4>
-    <form align="left">
-        <label>Nombre y Apellido</label>
-        <input type="text"><br>
-        <label>Email</label>
-        <input type="email"><br>
-        <label>Teléfono</label>
-        <input type="text"><br>
-        <label>Mensaje</label>
-        <input type="text"> 
+    <form align="left" id = "formulario">
+        <label for = "nombre">Nombre y Apellido</label>
+        <input type="text" id = "nombre" name = "nombre"><br>
+        <label for = "email">Email</label>
+        <input type="email" id = "email" name = "email"><br>
+        <labe for = "telefono">Teléfono</label>
+        <input type="text" id = "telefono" name = "telefono"><br>
+        <label for = "mensaje">Mensaje</label>
+        <textarea cols="20" rows=5></textarea>
+        <button type="submit" id ="enviarMensaje">Enviar</button>
     </form>    
     </div>
-    <button id ="enviarMensaje">Enviar</button>
 
 </section>
 
@@ -145,6 +225,55 @@
     <p>2024 ESPACIO Y HOGAR INMOBILIARIA | Todos los derechos reservados</p>
  
 </footer>   
+<script>
+
+/*Seleccion de operaciones*/
+
+document.getElementById('buscarPropiedad').addEventListener('click', function() {
+            var tipoOperacion = document.getElementById('tipoOperacion').value;
+            var tipoPropiedad = document.getElementById('tipoPropiedad').value;
+            var localidad = document.getElementById('localidad').value;
+            
+            
+            var urls = {
+                "venta_departamento_belgrano": "BelgranoVentDep.html",
+                "venta_casa_belgrano": "BelgranoVentCasas.html",
+                "alquiler_departamento_belgrano": "BelgranoAlqDep.html",
+                "alquiler_casa_belgrano": "BelgranoAlqCasas.html",
+                "venta_departamento_palermo": "PalermoVentDep.html",
+                "venta_casa_palermo": "PalermoVentCasas.html",
+                "alquiler_departamento_palermo": "PalermoAlqDep.html",
+                "alquiler_casa_palermo": "PalermoAlqCasas.html",
+                "venta_departamento_nuñez": "nuñezVenta.html",
+                "venta_casa_nuñez": "nunezcasasventa.html",
+                "alquiler_departamento_nuñez": "alquilerNunezDepto.html",
+                
+            };
+            
+            var key = tipoOperacion + "_" + tipoPropiedad + "_" + localidad;
+            var url = urls[key];
+            
+            if (url) {
+                window.location.href = "Sitios/" + url;
+            } else {
+                alert("No hay resultados para los filtros seleccionados.");
+            }
+        });
+
+
+/*Envio de formulario*/
+ const formulario = document.getElementById('formulario');
+
+ formulario.addEventListener('submit', function(event) {
+    alert("Su formulario ha sido enviado");
+    event.preventDefault();
+
+   
+    formulario.reset();
+});
+
+
+</script>
     
 </body>
 </html>

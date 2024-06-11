@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Propiedades de Núñez</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+       
+        function seleccionarDiv(elemento) {
+            // Obtén todos los elementos con la clase 'ContenedorNunez'
+            var contenedores = document.querySelectorAll('.ContenedorNunez');
+            
+            // Remueve la clase 'seleccionado' de todos los divs
+            contenedores.forEach(function(div) {
+                div.classList.remove('seleccionado');
+            });
+
+            // Agrega la clase 'seleccionado' solo al div clickeado
+            elemento.classList.add('seleccionado');
+        }
+    </script>
 
 </head>
 
@@ -13,6 +29,8 @@
         <div id = "navegacion">
             <img src = "Imagenes/Logo/Logo.png" id = "logo">
             <nav>
+
+                <a class = "botonInicio" href="../index.html"><b>Inicio</b></a>
                 
             </nav>
         </div>

@@ -5,19 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Propiedades de Núñez</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+
+        function seleccionarDiv(elemento) {
+            // Obtén todos los elementos con la clase 'ContenedorNunez'
+            var contenedores = document.querySelectorAll('.ContenedorNunez');
+            
+            // Remueve la clase 'seleccionado' de todos los divs
+            contenedores.forEach(function(div) {
+                div.classList.remove('seleccionado');
+            });
+
+            // Agrega la clase 'seleccionado' solo al div clickeado
+            elemento.classList.add('seleccionado');
+        }
+    </script>
 </head>
 <body>
     <header id="header">
         <div id="navegacion">
             <img src="Imagenes/Logo.png" id="logo">
             <nav>
-                <a href="#inicio"><b>Inicio</b></a>
+                <a class = "botonInicio" href="../index.html"><b>Inicio</b></a>
             </nav>
         </div>
     </header>
         <div class="TituloNunez">
             <p>Resultados de la búsqueda: 4 departamentos en alquiler en <b>Núñez</b></p>
-        </div>    <div class = "ContenedorNunez">
+        </div>    <div class = "ContenedorNunez" onclick="seleccionarDiv(this)">
             <div class="ImagenNunez">
                 <img src="Imagenes/Nunez/963f1340-50da-4d1d-9469-2936830456cc.jpeg">
             </div>
@@ -33,7 +49,7 @@
                 </ul>
             </div>
         </div>
-        <div class = "ContenedorNunez">
+        <div class = "ContenedorNunez" onclick="seleccionarDiv(this)">
             <div class="ImagenNunez">
                 <img src="Imagenes/Nunez/1d3ebb29-d643-493e-9234-ae7acc696572.jpeg">
             </div>
@@ -50,7 +66,7 @@
             </div>
     
         </div>
-        <div class = "ContenedorNunez">
+        <div class = "ContenedorNunez" onclick="seleccionarDiv(this)">
             <div class="ImagenNunez">
                 <img src="Imagenes/Nunez/88da6f77-d004-4a50-8030-4faa3fb6fb80.jpeg">
             </div>
@@ -67,7 +83,7 @@
             </div>
     
         </div>
-        <div class = "ContenedorNunez">
+        <div class = "ContenedorNunez" onclick="seleccionarDiv(this)">
             <div class="ImagenNunez">
                 <img src="Imagenes/Nunez/b6ab0a26-fd6a-4944-b530-659a9c6ef7f0.jpeg">>
             </div>
