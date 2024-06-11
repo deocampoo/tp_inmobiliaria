@@ -9,21 +9,19 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
      $(document).ready(function() {
-        // Función para animar el logo al cargar la página
-            $('#logo').css('opacity', '0'); // Establece la opacidad inicial del logo en 0
+            $('#logo').css('opacity', '0'); 
             $('#logo').animate({
-                opacity: '1', // Ajusta la opacidad al valor final deseado
-                width: '+=5px', // Puedes ajustar otros estilos aquí si lo deseas
+                opacity: '1', 
+                width: '+=5px', 
                 height: '+=5px'
-        }, 1000); // Duración de la animación en milisegundos (en este caso, 1 segundo)
+        }, 1000); 
         });
     $(document).ready(function(){
         $(".ContenedorNunez").each(function(index) {
-            $(this).css("opacity", "0.3"); // Establecer opacidad inicial difuminada
-            $(this).delay(200 * index).animate({ opacity: '1' }, "slow"); // Animar para volver a la opacidad normal
+            $(this).css("opacity", "0.3"); 
+            $(this).delay(200 * index).animate({ opacity: '1' }, "slow"); 
         });
     });
-         // Validación de formulario
          $('#formulario').submit(function(event) {
                 event.preventDefault();
                 var nombre = $('#nombre').val();

@@ -10,7 +10,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function(){
-            // Carga de página suave
             $('a[href^="#"]').on('click', function(event) {
                 var target = $(this.getAttribute('href'));
                 if( target.length ) {
@@ -21,7 +20,6 @@
                 }
             });
 
-            // Validación de formulario
             $('#formulario').submit(function(event) {
                 event.preventDefault();
                 var nombre = $('#nombre').val();
@@ -35,7 +33,6 @@
                 }
             });
 
-            // Validación de entrada numérica para el código postal
             $('#codigoPostal').on('keypress', function(event) {
                 if(event.which < 48 || event.which > 57) {
                     event.preventDefault();
@@ -44,46 +41,39 @@
         });
 
         $(document).ready(function(){
-            // Aplica el evento focus a los campos del formulario
             $('#nombre, #email, #telefono').on('focus', function() {
-                // Agrega la clase 'campo-enfocado' al campo enfocado
                 $(this).addClass('campo-enfocado');
             });
 
-            // Aplica el evento blur para eliminar la clase cuando el campo pierde el foco
+            
             $('#nombre, #email, #telefono').on('blur', function() {
-                // Elimina la clase 'campo-enfocado' cuando el campo pierde el foco
                 $(this).removeClass('campo-enfocado');
             });
         });
 
          $(document).ready(function(){
-            // Animación para el eslogan al cargar la página
             $('#eslogan').animate({
-                opacity: '1', // Hace que el eslogan sea visible
-                marginTop: '10px' // Mueve el eslogan hacia abajo
-            }, 1500); // Duración de la animación en milisegundos (en este caso, 1.5 segundos)
+                opacity: '1', 
+                marginTop: '10px' 
+            }, 1500); 
         });
         $(document).ready(function() {
-            // Función para animar las imágenes dentro del área de propiedades al cargar la página
-            $('#propiedades img').css('opacity', '0'); // Establece la opacidad inicial en 0 para todas las imágenes dentro del área de propiedades
             $('#propiedades img').each(function(index) {
                 $(this).delay(2 * index).animate({
-                    opacity: '1', // Ajusta la opacidad al valor final deseado
-                    width: '+=10px', // Puedes ajustar otros estilos aquí si lo deseas
+                    opacity: '1', 
+                    width: '+=10px', 
                     height: '+=10px'
-                }, 1000); // Duración de la animación en milisegundos (en este caso, 1 segundo)
+                }, 1000); 
                     });
             });
 
         $(document).ready(function() {
-        // Función para animar el logo al cargar la página
-            $('#logo').css('opacity', '0'); // Establece la opacidad inicial del logo en 0
+            $('#logo').css('opacity', '0'); 
             $('#logo').animate({
-                opacity: '1', // Ajusta la opacidad al valor final deseado
-                width: '+=5px', // Puedes ajustar otros estilos aquí si lo deseas
+                opacity: '1', 
+                width: '+=5px', 
                 height: '+=5px'
-        }, 1000); // Duración de la animación en milisegundos (en este caso, 1 segundo)
+        }, 1000); 
         });
         
     </script>   
@@ -233,7 +223,7 @@
     $('#buscarPropiedad').on('click', function() {
         var tipoOperacion = $('#tipoOperacion').val();
         var tipoPropiedad = $('#tipoPropiedad').val();
-        var localidad = $('#localidad').val().toLowerCase(); // Convertir a minúsculas
+        var localidad = $('#localidad').val().toLowerCase(); 
 
         var urls = {
             "venta_departamento_belgrano": "BelgranoVentDep.html",
