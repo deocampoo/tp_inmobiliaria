@@ -6,22 +6,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel = "stylesheet" href="styles.css"> 
         <title>Propiedades Belgrano</title>
+        <link rel="icon" href="Imagenes/Logo.png">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
-           
-            function seleccionarDiv(elemento) {
-                // Obtén todos los elementos con la clase 'ContenedorNunez'
-                var contenedores = document.querySelectorAll('.ContenedorNunez');
-                
-                // Remueve la clase 'seleccionado' de todos los divs
-                contenedores.forEach(function(div) {
-                    div.classList.remove('seleccionado');
+        $(document).ready(function() {
+        // Función para animar el logo al cargar la página
+            $('#logo').css('opacity', '0'); // Establece la opacidad inicial del logo en 0
+            $('#logo').animate({
+                opacity: '1', // Ajusta la opacidad al valor final deseado
+                width: '+=5px', // Puedes ajustar otros estilos aquí si lo deseas
+                height: '+=5px'
+        }, 1000); // Duración de la animación en milisegundos (en este caso, 1 segundo)
+        });
+            $(document).ready(function(){
+                $(".ContenedorBelgrano").each(function(index) {
+                    $(this).css("opacity", "0.3"); // Establecer opacidad inicial difuminada
+                    $(this).delay(200 * index).animate({ opacity: '1' }, "slow"); // Animar para volver a la opacidad normal
                 });
-    
-                // Agrega la clase 'seleccionado' solo al div clickeado
-                elemento.classList.add('seleccionado');
-            }
-        </script>
+            });
+                 // Validación de formulario
+                 $('#formulario').submit(function(event) {
+                event.preventDefault();
+                var nombre = $('#nombre').val();
+                var email = $('#email').val();
+                var telefono = $('#telefono').val();
+                if(nombre && email && telefono) {
+                    alert("Su formulario ha sido enviado");
+                    this.reset();
+                } else {
+                    alert("Por favor complete todos los campos.");
+                }
+            });
+            </script>
     </head>
     <body>
         <header id="header">
@@ -46,8 +62,8 @@
                 <p>Ciudad de la Paz 2700</p>
                 <h5>Belgrano, Capital Federal</h5>
                 <ul>
-                <li>39 m^2 totales</li>
-                <li>37.65 m^2 cubiertos</li>
+                <li>39 &sup2;  totales</li>
+                <li>37.65 &sup2;  cubiertos</li>
                 <li>2 ambientes</li>
                 <li>1 baño</li> 
                 </ul> 
@@ -62,8 +78,8 @@
                 <p>Moldes 2300</p>
                 <h5>Belgrano, Capital Federal</h5>
                 <ul>
-                    <li>62 m^2 totales</li>
-                    <li>55.1 m^2 cubiertos</li>
+                    <li>62 m&sup2;  totales</li>
+                    <li>55.1 m&sup2;  cubiertos</li>
                     <li>3 ambientes</li>
                     <li>2 baños</li>
                 </ul>
@@ -79,8 +95,8 @@
                 <p>Conesa 1800</p>
                 <h5>Belgrano R, Belgrano, Capital Federal</h5>
                 <ul>
-                    <li>151 m^2 totales</li>
-                    <li>146 m^2 cubiertos</li>
+                    <li>151 m&sup2;  totales</li>
+                    <li>146 m&sup2;  cubiertos</li>
                     <li>4 ambientes</li>
                     <li>2 baños</li>
                 </ul>
@@ -96,8 +112,8 @@
                 <p>Moldes 2300</p>
                 <h5>Belgrano R, Belgrano, Capital Federal</h5>
                 <ul>
-                    <li>166 m^2 totales </li>
-                    <li>149 m^2 cubiertos</li>
+                    <li>166 m&sup2;  totales </li>
+                    <li>149 m&sup2;  cubiertos</li>
                     <li>4 ambientes</li>
                     <li>2 baños</li>
                 </ul>
@@ -106,18 +122,18 @@
         <section id="contacto">
             <div id  = "mensaje">
             <h4>Para más información:</h4>
-            <form align="left">
-                <label>Nombre y Apellido</label>
-                <input type="text"><br>
-                <label>Email</label>
-                <input type="email"><br>
-                <label>Teléfono</label>
-                <input type="text"><br>
-                <label>Mensaje</label>
-                <input type="text"> 
+            <form align="left" id = "formulario">
+                <label for = "nombre">Nombre y Apellido</label>
+                <input type="text" id = "nombre" name = "nombre"><br>
+                <label for = "email">Email</label>
+                <input type="email" id = "email" name = "email"><br>
+                <label for = "telefono">Teléfono</label>
+                <input type="text" id = "telefono" name = "telefono"><br>
+                <label for = "mensaje">Mensaje</label>
+                <textarea cols="20" rows=5></textarea>
+                <button type="submit" id ="enviarMensaje">Enviar</button>
             </form>    
             </div>
-            <button id ="enviarMensaje">Enviar</button>
         
         </section>
         

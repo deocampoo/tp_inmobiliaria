@@ -1,27 +1,28 @@
 
 
-.TituloNunez p, .TituloBelgrano p, .TitutloPalermo p {
+.TituloNunez p, .TituloBelgrano p, .TitutloPalermo p, .TituloRecoleta p {
     font-size: 25px;
     margin-top: 30px;
     margin-bottom: 20px;
+    margin-left: 10px;
 
 }
 
 
 
-.ContenedorNunez, .ContenedorBelgrano, .ContenedorPalermo{
-    border: 2px solid black; 
+.ContenedorNunez, .ContenedorBelgrano, .ContenedorPalermo, .ContenedorRecoleta{
     background-color: rgba(225, 228, 228, 0.8);
     display: flex;
-    width: 1000px;
-    height: 300px;
+    padding: 5px;
+    border: 2px solid #ccc;
     border-radius: 20px;
-    overflow: hidden;
-    margin-bottom: 20px;
-    margin-left: 150px;
-    
+    overflow: auto;
+    margin: 5px;
+    margin-bottom: 30px;
 }
-.ImagenNunez img, .ImagenBelgrano img, .ImagenPalermo img{
+    
+
+.ImagenNunez img, .ImagenBelgrano img, .ImagenPalermo img, .ImagenRecoleta img{
     width: 450px;
     height: 300px;
     border-radius: 20px;
@@ -29,19 +30,30 @@
  
 }
 
-.TextoNunez, .TextoBelgrano, .TextoPalermo {
-    text-align: center;
-    padding: 0px;
-    padding-left: 10px;
+.TextoNunez, .TextoBelgrano, .TextoPalermo, .TextoRecoleta {
+    overflow: hidden;
 }
 
-.TextoNunez ul, .TextoBelgrano ul, .TextoPalermo ul{
-    display: flex ;
+
+
+.TextoRecoleta h5, .TextoBelgrano h5, .TextoNunez h5, .TextoPalermo h5 {
+    font-size: 0.9em;
+    margin: 5px 0;
+}
+
+.TextoRecoleta p, .TextoBelgrano p, .TextoNunez p, .TextoPalermo p {
+    margin: 5px 0;
+}
+
+
+.TextoNunez ul, .TextoBelgrano ul, .TextoPalermo ul, .TextoRecoleta ul{
+    list-style-type: disc; /* O el tipo de viñeta que prefieras */
+    padding-left: 20px; /* Ajusta el valor según sea necesario */
     
 }
 
-.TextoNunez li, .TextoBelgrano li, .TextoPalermo li{
-    display: flex ;
+.TextoNunez li, .TextoBelgrano li, .TextoPalermo li, .TextoRecoleta li{
+    display: list-item;
 }
 
 .botonInicio :hover {
@@ -129,9 +141,3 @@ body {
     
 }
 
-.seleccionado {
-    background-color:   #b3cccc
-
-
-
-}

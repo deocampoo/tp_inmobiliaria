@@ -6,6 +6,7 @@
     content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href="estilos.css"> 
     <title>Espacio y Hogar Inmobiliaria</title>
+    <link rel="icon" href="Imagenes/Logo/Logo.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -197,7 +198,7 @@
         <input type="text" id = "nombre" name = "nombre"><br>
         <label for = "email">Email</label>
         <input type="email" id = "email" name = "email"><br>
-        <labe for = "telefono">Teléfono</label>
+        <label for = "telefono">Teléfono</label>
         <input type="text" id = "telefono" name = "telefono"><br>
         <label for = "mensaje">Mensaje</label>
         <textarea cols="20" rows=5></textarea>
@@ -228,48 +229,40 @@
 <script>
 
 /*Seleccion de operaciones*/
+ $(document).ready(function() {
+    $('#buscarPropiedad').on('click', function() {
+        var tipoOperacion = $('#tipoOperacion').val();
+        var tipoPropiedad = $('#tipoPropiedad').val();
+        var localidad = $('#localidad').val().toLowerCase(); // Convertir a minúsculas
 
-document.getElementById('buscarPropiedad').addEventListener('click', function() {
-            var tipoOperacion = document.getElementById('tipoOperacion').value;
-            var tipoPropiedad = document.getElementById('tipoPropiedad').value;
-            var localidad = document.getElementById('localidad').value;
-            
-            
-            var urls = {
-                "venta_departamento_belgrano": "BelgranoVentDep.html",
-                "venta_casa_belgrano": "BelgranoVentCasas.html",
-                "alquiler_departamento_belgrano": "BelgranoAlqDep.html",
-                "alquiler_casa_belgrano": "BelgranoAlqCasas.html",
-                "venta_departamento_palermo": "PalermoVentDep.html",
-                "venta_casa_palermo": "PalermoVentCasas.html",
-                "alquiler_departamento_palermo": "PalermoAlqDep.html",
-                "alquiler_casa_palermo": "PalermoAlqCasas.html",
-                "venta_departamento_nuñez": "nuñezVenta.html",
-                "venta_casa_nuñez": "nunezcasasventa.html",
-                "alquiler_departamento_nuñez": "alquilerNunezDepto.html",
-                
-            };
-            
-            var key = tipoOperacion + "_" + tipoPropiedad + "_" + localidad;
-            var url = urls[key];
-            
-            if (url) {
-                window.location.href = "Sitios/" + url;
-            } else {
-                alert("No hay resultados para los filtros seleccionados.");
-            }
-        });
+        var urls = {
+            "venta_departamento_belgrano": "BelgranoVentDep.html",
+            "venta_casa_belgrano": "BelgranoVentCasas.html",
+            "alquiler_departamento_belgrano": "BelgranoAlqDep.html",
+            "alquiler_casa_belgrano": "BelgranoAlqCasas.html",
+            "venta_departamento_palermo": "PalermoVentDep.html",
+            "venta_casa_palermo": "PalermoVentCasas.html",
+            "alquiler_departamento_palermo": "PalermoAlqDep.html",
+            "alquiler_casa_palermo": "PalermoAlqCasas.html",
+            "venta_departamento_nuñez": "nuñezVenta.html",
+            "venta_casa_nuñez": "nunezcasasventa.html",
+            "alquiler_departamento_nuñez": "alquilerNunezDepto.html",
+            "alquiler_casa_nuñez": "alquilerNunezCasa.html",
+            "venta_departamento_recoleta": "recoletaVentaDepto.html",
+            "venta_casa_recoleta": "recoletaVentaCasa.html",
+            "alquiler_departamento_recoleta": "recoletaAlqDepto.html",
+            "alquiler_casa_recoleta": "recoletaAlqCasa.html"
+        };
 
+        var key = tipoOperacion + "_" + tipoPropiedad + "_" + localidad;
+        var url = urls[key];
 
-/*Envio de formulario*/
- const formulario = document.getElementById('formulario');
-
- formulario.addEventListener('submit', function(event) {
-    alert("Su formulario ha sido enviado");
-    event.preventDefault();
-
-   
-    formulario.reset();
+        if (url) {
+            window.location.href = "Sitios/" + url;
+        } else {
+            alert("No hay resultados para los filtros seleccionados.");
+        }
+    });
 });
 
 

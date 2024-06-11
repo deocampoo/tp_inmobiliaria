@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="esp">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propiedades de Núñez</title>
+    <title>Propiedades de Recoleta</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="Imagenes/Logo.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -18,7 +18,7 @@
         }, 1000); // Duración de la animación en milisegundos (en este caso, 1 segundo)
         });
         $(document).ready(function(){
-            $(".ContenedorNunez").each(function(index) {
+            $(".ContenedorRecoleta").each(function(index) {
                 $(this).css("opacity", "0.3"); // Establecer opacidad inicial difuminada
                 $(this).delay(200 * index).animate({ opacity: '1' }, "slow"); // Animar para volver a la opacidad normal
             });
@@ -43,80 +43,48 @@
         <div id="navegacion">
             <img src="Imagenes/Logo.png" id="logo">
             <nav>
-                <a class = "botonInicio" href="../index.html"><b>Inicio</b></a>
+                <a class="botonInicio" href="../index.html"><b>Inicio</b></a>
             </nav>
         </div>
     </header>
-    <div class="TituloNunez">
-        <p>Resultados de la búsqueda: 4 departamentos en venta en <b>Núñez</b></p>
-    </div>    <div class = "ContenedorNunez">
-        <div class="ImagenNunez">
-            <img src="Imagenes/Nunez/54c7dd4d-8df1-4143-a371-d4b88f7ed5ac.jpeg">
+    <div class="TituloRecoleta">
+        <p>Resultados de la búsqueda: 2 departamentos en venta en <b>Recoleta</b></p>
+    </div>
+    <div class="ContenedorRecoleta">
+        <div class="ImagenRecoleta">
+            <img src="Imagenes/Recoleta/imagen3.jpg">
         </div>
-        <div class = "TextoNunez" >
-            <h1>750.000 ARS <h5>+160.000 ARS expensas</h5></h1>
-            <p>Avenida Presidente Figueroa Alcorta 7100</p>
-            <h5>Nuñez, Capital Federal</h5>
+        <div class="TextoRecoleta">
+            <h1>600.000 ARS</h1>
+            <h5>+160.000 ARS expensas</h5>
+            <p>Avenida Libertador 7100</p>
+            <h5>Recoleta, Capital Federal</h5>
             <ul>
-                <li>83 m&sup2;  totales</li>
-                <li>83 m&sup2;  cubiertos</li>
-                <li>3 ambientes</li>
-                <li>1 baño</li>
+                <li>830 m&sup2; totales</li>
+                <li>500 m&sup2; cubiertos</li>
+                <li>4 ambientes</li>
+                <li>3 baños</li>
             </ul>
         </div>
     </div>
-    <div class = "ContenedorNunez">
-        <div class="ImagenNunez">
-            <img src="Imagenes/Nunez/c8d96892-f743-4bcf-a200-4555f80cc3af.jpeg">
+    <div class="ContenedorRecoleta">
+        <div class="ImagenRecoleta">
+            <img src="Imagenes/Recoleta/Imagen4.jpg">
         </div>
-        <div class = "TextoNunez" >
-            <h1>800.000 ARS <h5>+190.000 ARS expensas</h5></h1>
+        <div class="TextoRecoleta">
+            <h1>800.000 ARS</h1>
+            <h5>+190.000 ARS expensas</h5>
             <p>Honduras 170</p>
-            <h5>Nuñez, Capital Federal</h5>
+            <h5>Recoleta, Capital Federal</h5>
             <ul>
-                <li>83 m&sup2;  totales</li>
-                <li>83 m&sup2; cubiertos</li>
-                <li>3 ambientes</li>
+                <li>200 m&sup2; totales</li>
+                <li>205 m&sup2; cubiertos</li>
+                <li>2 ambientes</li>
                 <li>1 baño</li>
             </ul>
         </div>
-
     </div>
-    <div class = "ContenedorNunez">
-        <div class="ImagenNunez">
-            <img src="Imagenes/Nunez/65415505-d194-4f52-a7d4-c854ea4842b7.jpeg">
-        </div>
-        <div class = "TextoNunez" >
-            <h1>90.000 ARS <h5>+190.000 ARS expensas</h5></h1>
-            <p>Honduras 170</p>
-            <h5>Nuñez, Capital Federal</h5>
-            <ul>
-                <li>83 m&sup2;  totales</li>
-                <li>83 m&sup2; cubiertos</li>
-                <li>3 ambientes</li>
-                <li>1 baño</li>
-            </ul>
-        </div>
-
-    </div>
-    <div class = "ContenedorNunez">
-        <div class="ImagenNunez">
-            <img src="Imagenes/Nunez/b5cb0a83-2552-44b8-b9dd-34983e666a9b.jpeg">
-        </div>
-        <div class = "TextoNunez" >
-            <h1>70.000 ARS <h5>+190.000 ARS expensas</h5></h1>
-            <p>Honduras 170</p>
-            <h5>Nuñez, Capital Federal</h5>
-            <ul>
-                <li>83 m&sup2; totales</li>
-                <li>83 m&sup2;  cubiertos</li>
-                <li>3 ambientes</li>
-                <li>1 baño</li>
-            </ul>
-        </div>
-
-    </div>
-
+    
     <section id="contacto">
         <div id  = "mensaje">
         <h4>Para más información:</h4>
@@ -134,24 +102,21 @@
         </div>
     
     </section>
-    
-    <footer id = "footer">
+    <footer id="footer">
         <div id="datosContacto">
             <h3>Contacto</h3>
             <p>Dirección: Honduras 714, CABA</p>
             <p>Teléfono: +54 11 6457-9122</p>
             <p>Correo electrónico: info@espacioyhogar.com</p>
             <p>Horario: Lunes a Viernes, 9am - 5pm</p>
-        <h3>Seguinos en Redes Sociales</h3>
-        <ul>
-            <li id = "facebook"><img src = "Imagenes/Redes/Facebook.png"><a href="https://facebook.com/inmobiliaria" target="_blank">Facebook</a></li>
-            <li id = "twitter"><img src = "Imagenes/Redes/Twitter.png"><a href="https://twitter.com/inmobiliaria" target="_blank">Twitter</a></li>
-        </ul>
-    </div>
-    <hr>
+            <h3>Seguinos en Redes Sociales</h3>
+            <ul>
+                <li id="facebook"><img src="Imagenes/Redes/Facebook.png"><a href="https://facebook.com/inmobiliaria" target="_blank">Facebook</a></li>
+                <li id="twitter"><img src="Imagenes/Redes/Twitter.png"><a href="https://twitter.com/inmobiliaria" target="_blank">Twitter</a></li>
+            </ul>
+        </div>
+        <hr>
         <p>2024 ESPACIO Y HOGAR INMOBILIARIA | Todos los derechos reservados</p>
-     
-    </footer>  
+    </footer>
 </body>
 </html>
-

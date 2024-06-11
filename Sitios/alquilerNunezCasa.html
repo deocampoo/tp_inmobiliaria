@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel = "stylesheet" href="styles.css"> 
-        <title>Propiedades Palermo</title>
-        <link rel="icon" href="Imagenes/Logo.png">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-        $(document).ready(function() {
+<html lang="esp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades de Núñez</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Imagenes/Logo.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+     $(document).ready(function() {
         // Función para animar el logo al cargar la página
             $('#logo').css('opacity', '0'); // Establece la opacidad inicial del logo en 0
             $('#logo').animate({
@@ -17,14 +17,14 @@
                 height: '+=5px'
         }, 1000); // Duración de la animación en milisegundos (en este caso, 1 segundo)
         });
-            $(document).ready(function(){
-                $(".ContenedorPalermo").each(function(index) {
-                    $(this).css("opacity", "0.3"); // Establecer opacidad inicial difuminada
-                    $(this).delay(200 * index).animate({ opacity: '1' }, "slow"); // Animar para volver a la opacidad normal
-                });
-            });
-                 // Validación de formulario
-                 $('#formulario').submit(function(event) {
+    $(document).ready(function(){
+        $(".ContenedorNunez").each(function(index) {
+            $(this).css("opacity", "0.3"); // Establecer opacidad inicial difuminada
+            $(this).delay(200 * index).animate({ opacity: '1' }, "slow"); // Animar para volver a la opacidad normal
+        });
+    });
+         // Validación de formulario
+         $('#formulario').submit(function(event) {
                 event.preventDefault();
                 var nombre = $('#nombre').val();
                 var email = $('#email').val();
@@ -36,36 +36,34 @@
                     alert("Por favor complete todos los campos.");
                 }
             });
-            </script>
-        </script>
-    </head>
-    <body>
-        <header id="header">
-            <div id="navegacion">
-                <img src="Imagenes/Logo.png" id="logo">
-                <nav>
-                    <a class = "botonInicio" href="../index.html"><b>Inicio</b></a>
-                </nav>
-            </div>
-        </header>
-
-        <div class = "TituloPalermo">
-            <p>Resultados de la busqueda: 1 casa en alquiler en <b>Palermo</b></p>
+    </script>
+</head>
+<body>
+    <header id="header">
+        <div id="navegacion">
+            <img src="Imagenes/Logo.png" id="logo">
+            <nav>
+                <a class = "botonInicio" href="../index.html"><b>Inicio</b></a>
+            </nav>
         </div>
-        <div class = "ContenedorPalermo">
-            <div class="ImagenPalermo">
-                <img src = "Imagenes/Palermo/Imagen11.jpg">
+    </header>
+        <div class="TituloNunez">
+            <p>Resultados de la búsqueda: 1 departamentos en alquiler en <b>Núñez</b></p>
+        </div>    
+        <div class = "ContenedorNunez" onclick="seleccionarDiv(this)">
+            <div class="ImagenNunez">
+                <img src="Imagenes/Nunez/Imagen1.jpg">
             </div>
-            <div class = "TextoPalermo" >
-                <h1>2.700 USD</h1>
-                <p>Coronel Cabrer 4900</p>
-                <h5>Palermo Soho, Palermo, Capital Federal</h5>
+            <div class = "TextoNunez" >
+                <h1>1500 USD</h1>
+                <p>Arias 2100</p>
+                <h5>Nuñez, Capital Federal</h5>
                 <ul>
-                <li>343 m&sup2;  totales</li>
-                <li>283 m&sup2;  cubiertos</li>
-                <li>6 ambientes</li>
-                <li>3 baños</li> 
-                </ul> 
+                    <li>154 m&sup2; totales</li>
+                    <li>72 m&sup2; cubiertos</li>
+                    <li>4 ambientes</li>
+                    <li>2 baños</li>
+                </ul>
             </div>
         </div>
         
@@ -104,9 +102,6 @@
         <hr>
             <p>2024 ESPACIO Y HOGAR INMOBILIARIA | Todos los derechos reservados</p>
          
-        </footer>  
-
-
+        </footer>   
     </body>
-  
-</html>
+    </html>

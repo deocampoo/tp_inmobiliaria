@@ -5,36 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Propiedades de Núñez</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Imagenes/Logo.png">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-       
-        function seleccionarDiv(elemento) {
-            // Obtén todos los elementos con la clase 'ContenedorNunez'
-            var contenedores = document.querySelectorAll('.ContenedorNunez');
-            
-            // Remueve la clase 'seleccionado' de todos los divs
-            contenedores.forEach(function(div) {
-                div.classList.remove('seleccionado');
+        $(document).ready(function() {
+        // Función para animar el logo al cargar la página
+            $('#logo').css('opacity', '0'); // Establece la opacidad inicial del logo en 0
+            $('#logo').animate({
+                opacity: '1', // Ajusta la opacidad al valor final deseado
+                width: '+=5px', // Puedes ajustar otros estilos aquí si lo deseas
+                height: '+=5px'
+        }, 1000); // Duración de la animación en milisegundos (en este caso, 1 segundo)
+        });
+        $(document).ready(function(){
+            $(".ContenedorNunez").each(function(index) {
+                $(this).css("opacity", "0.3"); // Establecer opacidad inicial difuminada
+                $(this).delay(200 * index).animate({ opacity: '1' }, "slow"); // Animar para volver a la opacidad normal
             });
-
-            // Agrega la clase 'seleccionado' solo al div clickeado
-            elemento.classList.add('seleccionado');
-        }
-    </script>
+        });
+             // Validación de formulario
+             $('#formulario').submit(function(event) {
+                event.preventDefault();
+                var nombre = $('#nombre').val();
+                var email = $('#email').val();
+                var telefono = $('#telefono').val();
+                if(nombre && email && telefono) {
+                    alert("Su formulario ha sido enviado");
+                    this.reset();
+                } else {
+                    alert("Por favor complete todos los campos.");
+                }
+            });
+        </script>
 
 </head>
 
 <body>
-    <header id = "header">
-        <div id = "navegacion">
-            <img src = "Imagenes/Logo/Logo.png" id = "logo">
+    <header id="header">
+        <div id="navegacion">
+            <img src="Imagenes/Logo.png" id="logo">
             <nav>
-
                 <a class = "botonInicio" href="../index.html"><b>Inicio</b></a>
-                
             </nav>
         </div>
     </header>
+  
     <div class="TituloNunez">
         <p>Resultados de la búsqueda: 3 casas en venta en <b>Núñez</b></p>
     </div>
@@ -47,8 +62,8 @@
                 <p>Avenida Presidente Figueroa Alcorta 7100</p>
                 <h5>Nuñez, Capital Federal</h5>
                 <ul>
-                    <li>83 m^2 totales</li>
-                    <li>83 m^2 cubiertos</li>
+                    <li>83 m&sup2;  totales</li>
+                    <li>83 m&sup2;  cubiertos</li>
                     <li>3 ambientes</li>
                     <li>1 baño</li>
                 </ul>
@@ -63,8 +78,8 @@
                 <p>Libertador 1600</p>
                 <h5>Nuñez, Capital Federal</h5>
                 <ul>
-                    <li>83 m^2 totales</li>
-                    <li>83 m^2 cubiertos</li>
+                    <li>83 m&sup2;  totales</li>
+                    <li>83 m&sup2;  cubiertos</li>
                     <li>3 ambientes</li>
                     <li>1 baño</li>
                 </ul>
@@ -79,12 +94,49 @@
                 <p>Honduras 160</p>
                 <h5>Nuñez, Capital Federal</h5>
                 <ul>
-                    <li>83 m^2 totales</li>
-                    <li>83 m^2 cubiertos</li>
+                    <li>83 m&sup2;  totales</li>
+                    <li>83 m&sup2; cubiertos</li>
                     <li>3 ambientes</li>
                     <li>1 baño</li>
                 </ul>
             </div>
         </div>
+        <section id="contacto">
+            <div id  = "mensaje">
+            <h4>Para más información:</h4>
+            <form align="left" id = "formulario">
+                <label for = "nombre">Nombre y Apellido</label>
+                <input type="text" id = "nombre" name = "nombre"><br>
+                <label for = "email">Email</label>
+                <input type="email" id = "email" name = "email"><br>
+                <label for = "telefono">Teléfono</label>
+                <input type="text" id = "telefono" name = "telefono"><br>
+                <label for = "mensaje">Mensaje</label>
+                <textarea cols="20" rows=5></textarea>
+                <button type="submit" id ="enviarMensaje">Enviar</button>
+            </form>    
+            </div>
+        
+        </section>
+        
+        
+        <footer id = "footer">
+            <div id="datosContacto">
+                <h3>Contacto</h3>
+                <p>Dirección: Honduras 714, CABA</p>
+                <p>Teléfono: +54 11 6457-9122</p>
+                <p>Correo electrónico: info@espacioyhogar.com</p>
+                <p>Horario: Lunes a Viernes, 9am - 5pm</p>
+            <h3>Seguinos en Redes Sociales</h3>
+            <ul>
+                <li id = "facebook"><img src = "Imagenes/Redes/Facebook.png"><a href="https://facebook.com/inmobiliaria" target="_blank">Facebook</a></li>
+                <li id = "twitter"><img src = "Imagenes/Redes/Twitter.png"><a href="https://twitter.com/inmobiliaria" target="_blank">Twitter</a></li>
+            </ul>
+        </div>
+        <hr>
+            <p>2024 ESPACIO Y HOGAR INMOBILIARIA | Todos los derechos reservados</p>
+         
+        </footer>  
+
 </body>
 </html>
